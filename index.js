@@ -1,4 +1,4 @@
-console.log('💩 ');
+console.log('💩');
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,14 +14,49 @@ gsap.from('.fade', {
 // added 2 elements - setTween holds name of timeline
 // addtoController
 
-gsap.to('.scroll-text', {
-  x: 1200,
+gsap.to('.scroll-text-1', {
+  x: 3000,
   scrollTrigger: {
-    trigger: '.scroll-text',
-    start: 'top 700px',
-    end: 'top 10px',
+    trigger: '.header',
+    start: 'top 10px',
+    end: 'bottom 200px',
     scrub: true,
-    // markers: true,
+    markers: true,
+    id: 'scrub',
+  },
+});
+
+gsap.to('.scroll-text-2', {
+  x: -2000,
+  scrollTrigger: {
+    trigger: '.header',
+    start: 'top 10px',
+    end: 'bottom 200px',
+    scrub: true,
+    markers: true,
+    id: 'scrub',
+  },
+});
+
+gsap.to('.scroll-text-3', {
+  x: 3000,
+  scrollTrigger: {
+    trigger: '.header',
+    start: 'top 10px',
+    end: 'bottom 200px',
+    scrub: true,
+    markers: true,
+    id: 'scrub',
+  },
+});
+gsap.to('.scroll-text-4', {
+  x: -2000,
+  scrollTrigger: {
+    trigger: '.header',
+    start: 'top 10px',
+    end: 'bottom 200px',
+    scrub: true,
+    markers: true,
     id: 'scrub',
   },
 });
@@ -32,7 +67,9 @@ gsap.to('.scroll-text', {
 // }
 // )
 
-const slider = document.querySelector('.scroll-text');
+const slider = document.querySelector('.scroll-text-1');
+const line2 = document.querySelector('.scroll-text-2');
+const line4 = document.querySelector('.scroll-text-4');
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -57,7 +94,7 @@ slider.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
+  const walk = (x - startX) * 5; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
   console.log(walk);
 });
@@ -68,7 +105,7 @@ gsap.from('.zoom-img-left', {
     trigger: '.zoom-img-left',
     start: 'top 1000px',
     end: 'top 10px',
-    scrub: true,
+    // scrub: true,
     // markers: true,
     id: 'scrub',
   },
@@ -80,7 +117,7 @@ gsap.from('.zoom-img-right', {
     trigger: '.zoom-img-right',
     start: 'top 1000px',
     end: 'top 10px',
-    scrub: true,
+    // scrub: true,
     // markers: true,
     id: 'scrub',
   },
