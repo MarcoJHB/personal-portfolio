@@ -108,6 +108,7 @@ body {
 
 .fs-display-lg {
   font-size: var(--fs-display);
+  line-height: 4.5rem;
 }
 
 .btn {
@@ -205,6 +206,10 @@ header {
   animation: slideBack 20s linear reverse;
 }
 
+a {
+  transition: opacity 0.4s;
+}
+
 a:hover {
   color: #fbb0a5;
 }
@@ -235,9 +240,10 @@ a:hover {
 }
 
 .about__box {
+  background: #5d5fef;
+  border-radius: 20px;
   height: 100%;
   display: flex;
-  background: #fff;
   color: #171616;
 }
 
@@ -245,12 +251,11 @@ a:hover {
 .about__box .right-col {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 2rem;
   padding: 5%;
-  background: #fff;
-  color: #171616;
 }
+
+/* Project Section  */
 
 .project__content {
   overflow: hidden;

@@ -122,3 +122,127 @@ gsap.from('.zoom-img-right', {
     id: 'scrub',
   },
 });
+
+// Awesome Text Changer
+
+const awesomeText = document.querySelector('.awesome-text');
+
+function changeText(newText) {
+  // item.animate(...) returns an Animation (refer to https://developer.mozilla.org/en-US/docs/Web/API/Element/animate)
+  let animation = awesomeText.animate(
+    [
+      // keyframes
+      { transform: 'translateY(0px)', opacity: '1' },
+      { transform: 'translateY(1px)', opacity: '0.9' },
+      { transform: 'translateY(4px)', opacity: '0.7' },
+      { transform: 'translateY(9px)', opacity: '0.5' },
+      { transform: 'translateY(14px)', opacity: '0.3' },
+    ],
+    {
+      // timing options
+      duration: 200,
+    }
+  );
+  /* The Animation has an eventHandler
+      refer to here: https://developer.mozilla.org/en-US/docs/Web/API/Animation
+      and here: https://developer.mozilla.org/en-US/docs/Web/API/Animation/onfinish
+    */
+  animation.onfinish = function () {
+    // change text
+    awesomeText.innerText = newText;
+    // and start the second animation
+    awesomeText.animate(
+      [
+        // keyframes
+        { transform: 'translateY(14px)', opacity: '0.3' },
+        { transform: 'translateY(9px)', opacity: '0.5' },
+        { transform: 'translateY(4px)', opacity: '0.7' },
+        { transform: 'translateY(1px)', opacity: '0.9' },
+        { transform: 'translateY(0px)', opacity: '1' },
+      ],
+      {
+        // timing options
+        duration: 200,
+      }
+    );
+  };
+}
+
+const afrikaansText = document.querySelectorAll('.afrikaans');
+const chineseText = document.querySelectorAll('.chinese');
+const frenchText = document.querySelectorAll('.french');
+const germanText = document.querySelectorAll('.german');
+const greekText = document.querySelectorAll('.greek');
+const koreanText = document.querySelectorAll('.korean');
+const italianText = document.querySelectorAll('.italian');
+const spanishText = document.querySelectorAll('.spanish');
+const zuluText = document.querySelectorAll('.zulu');
+
+afrikaansText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      changeText('ontsagwekkende');
+    }
+  });
+});
+chineseText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      changeText('惊人');
+    }
+  });
+});
+frenchText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      changeText('extraordinaire');
+    }
+  });
+});
+
+germanText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      changeText('verblüffend');
+    }
+  });
+});
+greekText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      // awesomeText.innerText = 'φοβερό';
+      changeText('φοβερό');
+    }
+  });
+});
+
+koreanText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      changeText('엄청난');
+    }
+  });
+});
+
+italianText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      changeText('eccezionale');
+    }
+  });
+});
+
+spanishText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      changeText('increíble');
+    }
+  });
+});
+zuluText.forEach((text) => {
+  text.addEventListener('mouseover', () => {
+    {
+      changeText('emangalisayo');
+    }
+  });
+});
