@@ -21,7 +21,7 @@ gsap.to('.scroll-text-1', {
     start: 'top 10px',
     end: 'bottom 200px',
     scrub: true,
-    markers: true,
+    // markers: true,
     id: 'scrub',
   },
 });
@@ -33,7 +33,7 @@ gsap.to('.scroll-text-2', {
     start: 'top 10px',
     end: 'bottom 200px',
     scrub: true,
-    markers: true,
+    // markers: true,
     id: 'scrub',
   },
 });
@@ -45,7 +45,7 @@ gsap.to('.scroll-text-3', {
     start: 'top 10px',
     end: 'bottom 200px',
     scrub: true,
-    markers: true,
+    // markers: true,
     id: 'scrub',
   },
 });
@@ -56,7 +56,7 @@ gsap.to('.scroll-text-4', {
     start: 'top 10px',
     end: 'bottom 200px',
     scrub: true,
-    markers: true,
+    // markers: true,
     id: 'scrub',
   },
 });
