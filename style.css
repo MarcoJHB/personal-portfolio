@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;700;900&display=swap');
 
 :root {
-  --clr-primary-400: hsl(8, 91%, 82%);
+  --clr-primary-400: #56CCF2;
+  --clr-primary-500: #41C5F1;
+  --clr-primary-300: #A3E6F5;
 
   --clr-neutral-900: hsla(0, 2%, 9%, 1);
   --clr-neutral-700: hsla(0, 0%, 14%, 1);
@@ -279,11 +281,11 @@ header {
 }
 
 a {
-  transition: opacity 0.4s;
+  transition: all  0.4s;
 }
 
 a:hover {
-  color: #fbb0a5;
+  color: var(--clr-primary-400);
 }
 
 @keyframes slide {
@@ -312,7 +314,7 @@ a:hover {
 }
 
 .about__box {
-  background: #5d5fef;
+  background: #DE8989;
   border-radius: 20px;
   height: 100%;
   display: flex;
