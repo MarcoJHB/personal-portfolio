@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;700;900&display=swap');
 
 :root {
-  --clr-primary-400: #56CCF2;
-  --clr-primary-500: #41C5F1;
-  --clr-primary-300: #A3E6F5;
+  --clr-primary-400: #56ccf2;
+  --clr-primary-500: #41c5f1;
+  --clr-primary-300: #a3e6f5;
 
   --clr-neutral-900: hsla(0, 2%, 9%, 1);
   --clr-neutral-700: hsla(0, 0%, 14%, 1);
@@ -281,7 +281,7 @@ header {
 }
 
 a {
-  transition: all  0.4s;
+  transition: all 0.4s;
 }
 
 a:hover {
@@ -314,7 +314,7 @@ a:hover {
 }
 
 .about__box {
-  background: #DE8989;
+  background: #de8989;
   border-radius: 20px;
   height: 100%;
   display: flex;
@@ -331,7 +331,6 @@ a:hover {
 }
 
 .profile-container {
-  
 }
 
 ul {
@@ -548,4 +547,47 @@ svg {
 svg:hover {
   filter: drop-shadow(10px 10px 0px #000);
   transform: translate(-0.25rem, -0.25rem);
+}
+
+#mouse-circle, #mouse-project {
+  background-color: var(--clr-primary-400);
+  color: #000;
+  display: none;
+  position: absolute;
+  padding: 1rem;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: -32px 0px 0px -32px;
+  /* border: 1px solid var(--clr-primary-00); */
+  border-radius: 50%;
+  pointer-events: none !important;  
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0);
+  transform: scale(1);
+  animation-duration: 0.5s;
+  z-index: 999;
+  /* animation-name: circleScale; */
+  /* animation-iteration-count: infinite; */
+}
+
+
+@keyframes circleScaleOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.1);
+  }
+}
+
+@keyframes circleScaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
